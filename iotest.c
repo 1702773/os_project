@@ -33,7 +33,8 @@ int iotest(char userinput[4][1024]){
                     printf("ioinput array %d is:%s\n",k,ioinput[k]);
                 }
             }
-            open(iofile,O_RDWR|O_CREAT,S_IRUSR|S_IWUSR);
+            open(iofile,O_RDONLY,S_IRUSR|S_IWUSR);
+            printf("open read only test\n");
             //close(1);
             //open(iofile,O_RDWR|O_CREAT,S_IRUSR|S_IWUSR);
             //printf("This is a test\n");
