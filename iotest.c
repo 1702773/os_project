@@ -40,10 +40,21 @@ int iotest(char userinput[4][1024]){
                 break;
             }else{
                 char temp[1024];
-                printf("open read only test\n");
+                //printf("open read only test\n");
                 //read file test1.txt to printf
                 read(fd,temp,1024);
                 printf("The file content is :%s\n",temp);
+                strcpy(ioinput[i],temp);
+                for(int k = 0;k<=i;k++){
+                    if(k==i){
+                        strcpy(ioinput[k],temp);
+                        //printf("ioinput array %d is:%s\n",k,ioinput[k]);
+                    }else{
+                        strcpy(ioinput[k],userinput[k]);
+                        //printf("ioinput array %d is:%s\n",k,ioinput[k]);
+                    }
+                }
+                normalexec(ioinput);
             }
             
 
