@@ -1,0 +1,19 @@
+total 304
+drwxr-xr-x  18 shangsheng  staff    576  4 18 11:04 .
+drwxr-xr-x+  8 shangsheng  staff    256  4 18 08:37 ..
+drwxr-xr-x  15 shangsheng  staff    480  4 18 10:42 .git
+-rw-r--r--   1 shangsheng  staff     84  4 10 17:22 Makefile
+-rwxr-xr-x   1 shangsheng  staff  33682  4 12 11:39 a.out
+-rw-------   1 shangsheng  staff      0  4 18 11:04 a.tdx
+-rw-r--r--   1 shangsheng  staff     77  4 11 11:18 debug.txt
+-rw-r--r--   1 shangsheng  staff   2961  4 18 11:04 iotest.c
+-rw-r--r--   1 shangsheng  staff   4726  4 11 23:26 main.c
+-rw-r--r--   1 shangsheng  staff   1981  4 13 15:06 normalexec.c
+-rw-r--r--   1 shangsheng  staff    269  4 10 17:28 pipetest.c
+-rwxr-xr-x   1 shangsheng  staff  34049  4  6 13:50 tank
+-rw-r--r--   1 shangsheng  staff   2547  4 13 15:06 tank.c
+-rwxr-xr-x   1 shangsheng  staff  34564  4 18 11:04 tankaaa
+-rw-r--r--   1 shangsheng  staff    116  4 10 17:28 tankfunction.h
+-rw-r--r--   1 shangsheng  staff    672  4 12 11:40 test.c
+drwxr-xr-x   2 shangsheng  staff     64  4 11 10:49 test1
+-rw-r--r--   1 shangsheng  staff     27  4 18 10:56 test1.txt

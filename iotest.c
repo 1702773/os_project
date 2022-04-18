@@ -33,11 +33,20 @@ int iotest(char userinput[4][1024]){
                     printf("ioinput array %d is:%s\n",k,ioinput[k]);
                 }
             }
-            open(iofile,O_RDONLY,S_IRUSR|S_IWUSR);
-            printf("open read only test\n");
-            //close(1);
-            //open(iofile,O_RDWR|O_CREAT,S_IRUSR|S_IWUSR);
-            //printf("This is a test\n");
+            int fd = open(iofile,O_RDONLY,S_IRUSR|S_IWUSR);
+            printf("The fd is :%d\n",fd);
+            if(fd==-1){
+                printf("Your input file name not exist Please reinput\n");
+                break;
+            }else{
+                char temp[1024];
+                printf("open read only test\n");
+                //read file test1.txt to printf
+                read(fd,temp,1024);
+                printf("The file content is :%s\n",temp);
+            }
+            
+
             //normalexec(ioinput);
             //userinput[i]之前的為指令
             //normalexec(userinput);
