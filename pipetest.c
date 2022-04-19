@@ -12,33 +12,43 @@ int pipetest(char userinput[4][1024]){
         if(strcmp(userinput[i],"||")==0){
             printf("偵測到pipe符號\n");
             //pipe為將前面執行出來的結果丟到後面
-            //例如：history | grep "make"
-            //將history輸出 導入到 grep的輸入中 並利用grep取出含有make的輸出
+            //例如：ls -la | sort -r 
+            //將ls -la 輸出 導入到 sort的輸入中 
             //所以左邊要先做輸出導入到右邊
             //先以將上面這行程式碼可以執行為目標
             pid_t child ;
             int p[2];
-            int i ;
+            int a,k ;
             pipe(p);
             child = fork();
             if(child==0){
-                close(1);
+                //將pipe前面的結果導入到p[1]
                 dup(p[1]);
-                write(p[1],"This is child process\n",50);
-                exit(0);
-                //close(1);
-                //close(1);
-                //write(p[1],"this is test\n",25);
-                //system("ls");
-                //system("pwd");
-                //system("ls -la");
-                //printf("%d\n",system("history"));
+                close(1);
+                printf("%d\n",i);
+                char abuf[4][1024]={' '};
+                for(k = 0;k<i;k++){
+                    strcpy(abuf[k],userinput[k]);
+                }
+                for(k=0; k <i;k++){
+                    
+                    printf("%s\n",abuf[k]);
+                }
+                int fd =open("/dev/tty",O_WRONLY);
+                stdout = fdopen(fd,"w");
+                normalexec(abuf);
+                //write(p[1],"This is child process\n",50);
+                //exit(0);
             }else{
-                close(0);
+                //close(0);
+                //close(0)會造成系統問提，如關有關必須要額外再打開
                 dup(p[0]);
                 char buf[1024];
+                printf("This is parent process to use child data\n");
                 read(p[0],buf,sizeof(buf));
-                printf("%s\n",buf);
+                printf("%s",buf);
+                wait(0);
+                printf("Finish\n");
                 //char buf[1024];
                 //read(p[0],buf,sizeof(buf));
                 //printf("%s\n",buf);
@@ -47,11 +57,12 @@ int pipetest(char userinput[4][1024]){
                 //write(fd,buf,sizeof(buf));
                 //int a = execl("/usr/bin/grep",NULL);
                 //printf("%d\n",a);
-                printf("grep test finish\n");
+                //int fd =open("/dev/tty",O_WRONLY);
+                //stdin = fdopen(fd,"w");
                 break;
                 
             }
-            
+            break;
         }
     }
     //printf("pipetest start-----------------\n");
