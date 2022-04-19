@@ -22,6 +22,10 @@ int pipetest(char userinput[4][1024]){
             pipe(p);
             child = fork();
             if(child==0){
+                close(1);
+                dup(p[1]);
+                write(p[1],"This is child process\n",50);
+                exit(0);
                 //close(1);
                 //close(1);
                 //write(p[1],"this is test\n",25);
@@ -29,8 +33,12 @@ int pipetest(char userinput[4][1024]){
                 //system("pwd");
                 //system("ls -la");
                 //printf("%d\n",system("history"));
-                break;
             }else{
+                close(0);
+                dup(p[0]);
+                char buf[1024];
+                read(p[0],buf,sizeof(buf));
+                printf("%s\n",buf);
                 //char buf[1024];
                 //read(p[0],buf,sizeof(buf));
                 //printf("%s\n",buf);
@@ -41,8 +49,9 @@ int pipetest(char userinput[4][1024]){
                 //printf("%d\n",a);
                 printf("grep test finish\n");
                 break;
+                
             }
-            break;
+            
         }
     }
     //printf("pipetest start-----------------\n");
