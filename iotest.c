@@ -56,8 +56,6 @@ int iotest(char userinput[4][1024]){
                 }
                 normalexec(ioinput);
             }
-            
-
             //normalexec(ioinput);
             //userinput[i]之前的為指令
             //normalexec(userinput);

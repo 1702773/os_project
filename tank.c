@@ -68,7 +68,7 @@ while(type!=0){
         }else if((strcmp(userinput[i],">>")==0)||(strcmp(userinput[i],"<<")==0)){
             type = 1;
             break;
-        }else if(strcmp(userinput[i],"pipe")==0){
+        }else if(strcmp(userinput[i],"||")==0){
             type = 2 ;
             break;
         }else{
@@ -77,10 +77,13 @@ while(type!=0){
     }
     if(type==1){
         iotest(userinput);
+        continue;
     }else if (type==2){
         pipetest(userinput);
+        continue;
     }else if (type==3){
         normalexec(userinput);
+        continue;
     }else{
         printf("找不到型態");
         exit(1);
