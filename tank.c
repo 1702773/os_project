@@ -36,7 +36,7 @@ while(type!=0){
     //printf("spacecount: %d\n",spacecount);
     //printf("%s\n",typeid(spacecount).name());
 
-    char userinput[4][1024]={' '};
+    char userinput[10][1024]={' '};
     //userinput[spacecount][1024]={' '};
     //char userinput[4][1024]={' '};
     //userinput="Hnkaaaaaa";
@@ -51,8 +51,8 @@ while(type!=0){
         }   
     }
     //printf("總共有%d個空白\n",spacecount);
-    if(spacecount>4){
-        printf("您的輸入過多，最多只能輸入4個\n");
+    if(spacecount>10){
+        printf("您的輸入過多，最多只能輸入10個\n");
         exit(1);
     }
     /*for(int i = 0 ; i < 4;i++){
@@ -60,7 +60,7 @@ while(type!=0){
     }*/
     int type = 0 ;
     //type 1 為 io , 2 為 pipe , 3 為 一般模式 
-    for(int i = 0 ; i < 4;i++){
+    for(int i = 0 ; i < 10;i++){
         //printf("%d\n",type);
         if(strcmp(userinput[0],"exit")==0){
             printf("Bye\n");

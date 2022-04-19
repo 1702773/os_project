@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int normalexec(char userinput[4][1024]){
+int normalexec(char userinput[10][1024]){
     //printf("normalexectest start-----------------\n");
     /*for(int i = 0 ; i < 4;i++){
         printf("Your %d input is:%s\n",i,userinput[i]);
@@ -11,7 +11,7 @@ int normalexec(char userinput[4][1024]){
     //printf("Your input is :%s\n",userinput[0]);
     uid_t child;
     char * userpath = "";
-    for(int i = 0 ; i < 4;i++){
+    for(int i = 0 ; i < 10;i++){
         if(strcmp(userinput[0],"cd")==0){
             //char uspwd[256];
             //printf("cd功能\n");

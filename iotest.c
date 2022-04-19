@@ -4,17 +4,17 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include "tankfunction.h"
-int iotest(char userinput[4][1024]){
+int iotest(char userinput[10][1024]){
     printf("iotest start-----------------\n");
-        for(int i = 0 ; i < 4;i++){
+        for(int i = 0 ; i < 10;i++){
         printf("Your %d input is:%s\n",i,userinput[i]);
     }
     //先判斷是輸入還是輸出,先以可以讓ls輸出到一個txt檔案為目標
-    for(int i = 0 ; i < 4;i++){
+    for(int i = 0 ; i < 10;i++){
         pid_t child;
     if(strcmp(userinput[i],"<<")==0){
         printf("input\n");
-        char ioinput[4][1024] = {' '};
+        char ioinput[10][1024] = {' '};
         //userinput[i]之後的為檔案名稱 
         
         char iofile[1024] = {' '};
