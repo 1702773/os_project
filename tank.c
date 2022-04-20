@@ -80,6 +80,7 @@ while(type!=0){
         continue;
     }else if (type==2){
         pipetest(userinput);
+        //printf("pipetest finish\n");
         continue;
     }else if (type==3){
         normalexec(userinput);
