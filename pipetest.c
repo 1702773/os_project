@@ -11,7 +11,7 @@ int pipetest(char userinput[10][1024]){
             if(strcmp(userinput[i],"||")==0){
                 //printf("偵測到pipe\n");
                 // 左邊將stdout接到p[0]||右邊將stdin接到p[1]
-                pid_t child;
+                pid_t child,child1;
                 int p[2],status,done=0;
                 pipe(p);
                 //char pipeinput[10][1024]={' '};
@@ -29,8 +29,8 @@ int pipetest(char userinput[10][1024]){
                        //exit(0);
                        
                 }
-                child= fork();
-                if(child==0){
+                child1= fork();
+                if(child1==0){
                         //fflush(stdout);
                         //printf("hello is me\n");
                         close(p[1]);

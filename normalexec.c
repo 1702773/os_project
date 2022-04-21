@@ -17,7 +17,7 @@ int normalexec(char userinput[10][1024]){
             //printf("cd功能\n");
             //printf("your cd input is:%s\n",userinput[1]);
             if(strcmp(userinput[1],"")==0){
-                //printf("請輸入您要進入哪個資料夾\n");
+                printf("請輸入您要進入哪個資料夾\n");
             }else{
                 //printf("cd start------------\n");
                 chdir(userinput[1]);

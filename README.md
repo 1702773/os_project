@@ -4,5 +4,5 @@
 1.fget userinput(已完成)<br>
 2.normalexec(部分完成)<br>
 3.iotest(部分完成)<br>
-4.pipetest(未完成)<br>
+4.pipetest(部分完成)<br>
 5.pipe combine io (未完成)<br>
