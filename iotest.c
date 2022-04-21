@@ -5,15 +5,15 @@
 #include <fcntl.h>
 #include "tankfunction.h"
 int iotest(char userinput[10][1024]){
-    printf("iotest start-----------------\n");
+    //printf("iotest start-----------------\n");
         for(int i = 0 ; i < 10;i++){
-        printf("Your %d input is:%s\n",i,userinput[i]);
+        //printf("Your %d input is:%s\n",i,userinput[i]);
     }
     //先判斷是輸入還是輸出,先以可以讓ls輸出到一個txt檔案為目標
     for(int i = 0 ; i < 10;i++){
         pid_t child;
     if(strcmp(userinput[i],"<<")==0){
-        printf("input\n");
+        //printf("input\n");
         char ioinput[10][1024] = {' '};
         //userinput[i]之後的為檔案名稱 
         
@@ -30,11 +30,11 @@ int iotest(char userinput[10][1024]){
             }else{
                 for(int k = 0;k<i;k++){
                     strcpy(ioinput[k],userinput[k]);
-                    printf("ioinput array %d is:%s\n",k,ioinput[k]);
+                    //printf("ioinput array %d is:%s\n",k,ioinput[k]);
                 }
             }
             int fd = open(iofile,O_RDONLY,S_IRUSR|S_IWUSR);
-            printf("The fd is :%d\n",fd);
+            //printf("The fd is :%d\n",fd);
             if(fd==-1){
                 printf("Your input file name not exist Please reinput\n");
                 break;
@@ -65,8 +65,8 @@ int iotest(char userinput[10][1024]){
         //將檔案內容導入到指令
         break;
     }else if(strcmp(userinput[i],">>")==0){
-        printf("output\n");
-        printf("ls output test\n");
+        //printf("output\n");
+        //printf("ls output test\n");
         char ioinput[4][1024] = {' '};
         //userinput[i]之後的為檔案名稱 
         char iofile[1024] = {' '};
@@ -78,7 +78,7 @@ int iotest(char userinput[10][1024]){
         }else{
             for(int k = 0;k<i;k++){
                 strcpy(ioinput[k],userinput[k]);
-                printf("ioinput array %d is:%s\n",k,ioinput[k]);
+                //printf("ioinput array %d is:%s\n",k,ioinput[k]);
             }
             close(1);
             open(iofile,O_RDWR|O_CREAT,S_IRUSR|S_IWUSR);
@@ -91,12 +91,12 @@ int iotest(char userinput[10][1024]){
         }
         //open("./output.txt", O_RDWR | O_CREAT ,S_IRUSR | S_IWUSR);
         //dup(1);   
-        printf("io output finish\n");
+        //printf("io output finish\n");
         break;
     }else{
         
     }
-    printf("iotest end-----------------\n");
+    //printf("iotest end-----------------\n");
     }
     return 0;
 

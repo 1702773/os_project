@@ -1,0 +1,37 @@
+total 10152
+drwxr-xr-x  13 shangsheng  staff      416  4 21 14:16 .
+drwxr-xr-x  26 shangsheng  staff      832  4 21 14:15 ..
+-rw-r--r--   1 shangsheng  staff  5124203  4 18 11:43 CBB107039.docx
+-rwxr-xr-x   1 shangsheng  staff    33842  4 18 11:45 a.out
+-rw-------   1 shangsheng  staff        0  4 21 14:16 a.txt
+-rw-r--r--   1 shangsheng  staff      331  4 18 11:43 q1.c
+-rw-r--r--   1 shangsheng  staff      504  4 18 11:43 q2.c
+-rw-r--r--   1 shangsheng  staff      274  4 18 11:43 q3.c
+-rw-r--r--   1 shangsheng  staff      560  4 18 11:43 q4.c
+-rw-r--r--   1 shangsheng  staff      546  4 18 11:43 q5.c
+-rw-r--r--   1 shangsheng  staff      493  4 18 11:43 q6.c
+-rw-r--r--   1 shangsheng  staff      494  4 18 11:43 q7.c
+-rw-r--r--   1 shangsheng  staff      456  4 18 11:45 q8.c
+CBB107039.docx
+a.out
+a.txt
+q1.c
+q2.c
+q3.c
+q4.c
+q5.c
+q6.c
+q7.c
+q8.c
+CBB107039.docx
+a.out
+a.txt
+q1.c
+q2.c
+q3.c
+q4.c
+q5.c
+q6.c
+q7.c
+q8.c
+/Users/shangsheng/Code/C/os_project/os-homework

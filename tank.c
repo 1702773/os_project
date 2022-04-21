@@ -6,10 +6,9 @@
 #include "tankfunction.h"
 int main(int argc ,char * argv[]){
 int type = 1 ;
-char userpwd[1024];
-realpath(argv[0],userpwd);
+
 printf("\033[;36m");
-printf("If you didn`t know What are you want\nYou can type help\n");
+printf("If you don`t know What are you want\nYou can type help\n");
 while(type!=0){
     char usertype[1024];
     printf("\033[;31m");//設定顏色紅色
@@ -80,7 +79,6 @@ while(type!=0){
         continue;
     }else if (type==2){
         pipetest(userinput);
-        //printf("pipetest finish\n");
         continue;
     }else if (type==3){
         normalexec(userinput);

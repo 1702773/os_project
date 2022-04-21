@@ -9,7 +9,7 @@ int normalexec(char userinput[10][1024]){
         printf("Your %d input is:%s\n",i,userinput[i]);
     }*/
     //printf("Your input is :%s\n",userinput[0]);
-    uid_t child;
+    pid_t child;
     char * userpath = "";
     for(int i = 0 ; i < 10;i++){
         if(strcmp(userinput[0],"cd")==0){
